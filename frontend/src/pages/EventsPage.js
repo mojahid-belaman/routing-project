@@ -1,41 +1,20 @@
-import React, { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import EventsList from "../components/EventsList";
 
-const EventsPage = () => {
-  const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchEvents = async () => {
-      setLoading(true);
-      setError(null);
-      try {
-        const resp = await fetch("http://localhost:8080/events");
-        if (!resp.ok) {
-          throw new Error("Something Went Wrong!");
-        }
-        const data = await resp.json();
-        setEvents(data.events);
-        setLoading(false);
-      } catch (error) {
-        setLoading(false);
-        setError(error.message);
-      }
-    };
-    fetchEvents();
-  }, []);
-  let content = <p style={{ textAlign: "center" }}>Not Founds Events.</p>;
-  if (events.length > 0) {
-    content = <EventsList events={events} />;
-  }
-  if (error) {
-    content = <p>{error}</p>;
-  }
-  if (loading) {
-    content = <p style={{ textAlign: "center" }}>LOADING...</p>;
-  }
-  return <>{content}</>;
-};
+function EventsPage() {
+  const events = useLoaderData();
+  return <EventsList events={events} />;
+}
 
 export default EventsPage;
+
+export async function loader() {
+  const response = await fetch("http://localhost:8080/events");
+
+  if (!response.ok) {
+    // ...
+  } else {
+    const resData = await response.json();
+    return resData.events;
+  }
+}
