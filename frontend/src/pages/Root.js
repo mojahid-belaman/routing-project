@@ -6,7 +6,7 @@ const RootLayout = () => {
   return (
     <>
       <MainNavigation />
-      <main>
+      <main style={{ maxWidth: "60rem", margin: "auto", padding: "0 2rem" }}>
         <Outlet />
       </main>
     </>
