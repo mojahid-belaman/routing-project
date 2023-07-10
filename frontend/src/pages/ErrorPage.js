@@ -3,17 +3,18 @@ import MainNavigation from "../components/MainNavigation";
 import PageContent from "../components/PageContent";
 
 function ErrorPage() {
-  const data = useRouteError();
+  const error = useRouteError();
 
   let title = "Error Occured!";
   let message = "Somthing Went Wrong.";
   
-  if (data.status === 400) {
-    message = "Could not fetch events.";
+  if (error.status === 500) {
+    title = 'Error Fetched'
+    message = error.data.message;
   }
-  if (data.status === 404) {
-    title = "Error Find!";
-    message = `The page you are looking for doesn't exist.`;
+  if (error.status === 404) {
+    title = "Not Found!";
+    message = `Could not find resource or page.`;
   }
   return (
     <>
