@@ -1,11 +1,1 @@
-{
-  "events": [
-    {
-      "id": "e1",
-      "title": "A dummy event",
-      "date": "2023-02-22",
-      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
-      "description": "Join this amazing event and connect with fellow developers."
-    }
-  ]
-}
+{"events":[{"title":"react","image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIzG3uSxo1-4f6fkBkFQIldGomrS1xeU4nbg&usqp=CAU","date":"2023-07-25","description":"description","id":"89b2e6cb-d6e3-4b27-8d05-a98992880a96"},{"title":"Gitex","image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxbGgLi3sWvjLdldKRBdU-FkBZB7DPlKvjfw&usqp=CAU","date":"2023-07-18","description":"description","id":"50e6ac16-1df9-496e-a06e-d25a99d22ed7"},{"title":"new event","image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjODLVZM3fze6nrZ1PtWaidPJcAEjOhyI17g&usqp=CAU","date":"2023-07-18","description":"description about new event","id":"58ad0ada-1987-4d77-a64b-52fa7b1315d3"},{"title":"new title","image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcdeVsllO9hB2Lb4_XGRPhuT7OiJqIMuQ_lA&usqp=CAU","date":"2023-07-26","description":"new description","id":"32b1f76a-f910-4d64-8421-fdb17726f2a7"},{"title":"title","image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOS0ZdHuchxKNkbktiP0jB-Uqt_zOLGnQ20w&usqp=CAU","date":"2023-07-20","description":"description","id":"5fc1db0f-d97d-42c7-a97b-ad6e1cb94c1e"},{"id":"e1","title":"A dummy event","date":"2023-02-22","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","description":"Join this amazing event and connect with fellow developers."}]}
