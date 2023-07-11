@@ -9,7 +9,6 @@ function ErrorPage() {
   let message = "Somthing Went Wrong.";
   
   if (error.status === 500) {
-    title = 'Error Fetched'
     message = error.data.message;
   }
   if (error.status === 404) {
