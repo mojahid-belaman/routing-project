@@ -1,6 +1,6 @@
+import { useEffect } from "react";
 import { json, redirect, useNavigate, useSearchParams } from "react-router-dom";
 import AuthForm from "../components/AuthForm";
-import { useEffect } from "react";
 
 function AuthenticationPage() {
   const [searchParam] = useSearchParams();
@@ -34,10 +34,13 @@ export async function action({ request }) {
     body: JSON.stringify(userData),
   });
   if (response.status === 422 || response.status === 401) {
-    throw response;
+    return response;
   }
   if (!response.ok) {
     throw json({ message: "Could not authenticate user." }, { status: 500 });
   }
+
+  const resData = await response.json();
+  localStorage.setItem("token", resData.token);
   return redirect("/");
 }
