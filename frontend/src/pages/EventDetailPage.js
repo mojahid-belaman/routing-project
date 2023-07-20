@@ -69,8 +69,8 @@ export async function action({ request, params }) {
   const response = await fetch("http://localhost:8080/events/" + id, {
     method: request.method,
     headers: {
-      'Authorization': 'Bearer ' + token
-    }
+      Authorization: "Bearer " + token,
+    },
   });
   if (!response.ok) {
     json({ message: "Could not delete event." }, { status: 500 });
