@@ -5,6 +5,10 @@ export const getToken = () => {
   return token;
 };
 
+export function tokenLoader() {
+  return getToken();
+}
+
 export function checkAuthLoader() {
   const token = getToken();
   if (!token) {
