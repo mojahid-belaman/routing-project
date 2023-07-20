@@ -1,7 +1,6 @@
 import React from "react";
 import MainNavigation from "../components/MainNavigation";
 import { Outlet } from "react-router-dom";
-import { getToken } from "../utils/auth";
 
 const RootLayout = () => {
   // const navigation = useNavigation();
@@ -17,7 +16,3 @@ const RootLayout = () => {
 };
 
 export default RootLayout;
-
-export function action() {
-  return getToken();
-}
