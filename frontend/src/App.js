@@ -29,7 +29,7 @@ import EventDetailPage, {
 } from "./pages/EventDetailPage";
 import NewEventPage from "./pages/NewEventPage";
 import EditEventPage from "./pages/EditEventPage";
-import RootLayout from "./pages/Root";
+import RootLayout, { action as tokenLoader } from "./pages/Root";
 import RootEventLayout from "./pages/RootEvent";
 import ErrorPage from "./pages/ErrorPage";
 import { action as manipulateEventAction } from "./components/EventForm";
@@ -39,12 +39,15 @@ import NewsletterPage, {
 import AuthenticationPage, {
   action as authAction,
 } from "./pages/Authentication";
+import { action as logoutAction } from "./pages/Logout";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    id: "root",
     element: <RootLayout />,
     errorElement: <ErrorPage />,
+    loader: tokenLoader,
     children: [
       {
         index: true,
@@ -92,6 +95,10 @@ const router = createBrowserRouter([
         path: "auth",
         element: <AuthenticationPage />,
         action: authAction,
+      },
+      {
+        path: "logout",
+        action: logoutAction,
       },
     ],
   },
