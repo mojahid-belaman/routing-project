@@ -29,7 +29,7 @@ import EventDetailPage, {
 } from "./pages/EventDetailPage";
 import NewEventPage from "./pages/NewEventPage";
 import EditEventPage from "./pages/EditEventPage";
-import RootLayout, { action as tokenLoader } from "./pages/Root";
+import RootLayout from "./pages/Root";
 import RootEventLayout from "./pages/RootEvent";
 import ErrorPage from "./pages/ErrorPage";
 import { action as manipulateEventAction } from "./components/EventForm";
@@ -40,7 +40,7 @@ import AuthenticationPage, {
   action as authAction,
 } from "./pages/Authentication";
 import { action as logoutAction } from "./pages/Logout";
-import { checkAuthLoader } from "./utils/auth";
+import { checkAuthLoader, tokenLoader } from "./utils/auth";
 
 const router = createBrowserRouter([
   {
